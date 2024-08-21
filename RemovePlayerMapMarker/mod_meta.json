@@ -1,0 +1,8 @@
+{
+	"Name": "Remove Player Map Marker",
+	"ModGUID": "Johncook2.RemovePlayerMapMarker",
+	"Version": "0.1.0",
+	"ModAssembly": "RemovePlayerMapMarker.dll",
+	"MinWinchVersion": "0.2.3",
+	"Entrypoint": "RemovePlayerMapMarker.Loader/Initialize"
+}
