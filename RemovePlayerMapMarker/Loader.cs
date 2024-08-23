@@ -1,17 +1,16 @@
-﻿using UnityEngine;
+﻿using HarmonyLib;
+using System.Reflection;
 
-namespace RemovePlayerMapMarker
+namespace Remove_Player_Map_Marker
 {
-	public class Loader
-	{
-		/// <summary>
-		/// This method is run by Winch to initialize your mod
-		/// </summary>
-		public static void Initialize()
-		{
-			var gameObject = new GameObject(nameof(RemovePlayerMapMarker));
-			gameObject.AddComponent<RemovePlayerMapMarker>();
-			GameObject.DontDestroyOnLoad(gameObject);
-		}
-	}
+    public class Loader
+    {
+        /// <summary>
+        /// This method is run by Winch to initialize your mod
+        /// </summary>
+        public static void Initialize()
+        {
+            new Harmony("com.Johncook.RemovePlayerMapMarker").PatchAll(Assembly.GetExecutingAssembly());
+        }
+    }
 }
