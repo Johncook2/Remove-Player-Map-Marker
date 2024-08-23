@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using Winch.Core;
-using Harmonylib;
+using HarmonyLib;
 
 namespace RemovePlayerMapMarker
 {
