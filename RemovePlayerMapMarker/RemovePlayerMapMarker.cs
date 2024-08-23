@@ -4,13 +4,6 @@ using Harmonylib;
 
 namespace RemovePlayerMapMarker
 {
-	public class RemovePlayerMapMarker : MonoBehaviour
-	{
-		public void Awake()
-		{
-			WinchCore.Log.Debug($"{nameof(RemovePlayerMapMarker)} has loaded!");
-		}
-	}
 
 	[HarmonyPatch(typeof(MapWindow), "GetPlayerPositionAsMapPosition")]
 	public static class MapWindow_GetPlayerPositionAsMapPosition_Patch
