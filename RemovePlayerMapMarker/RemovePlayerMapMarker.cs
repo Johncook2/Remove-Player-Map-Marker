@@ -2,7 +2,7 @@
 using Winch.Core;
 using HarmonyLib;
 
-namespace RemovePlayerMapMarker
+namespace RemovePlayerMapMarker.Patches
 {
 
 	[HarmonyPatch(typeof(MapWindow), "GetPlayerPositionAsMapPosition")]
