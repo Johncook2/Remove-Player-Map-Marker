@@ -1,7 +1,7 @@
 ﻿using HarmonyLib;
 using System.Reflection;
 
-namespace Remove-Player-Map-Marker
+namespace RemovePlayerMapMarker
 {
     public class Loader
     {
