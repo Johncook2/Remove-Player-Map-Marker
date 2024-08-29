@@ -13,5 +13,14 @@ namespace RemovePlayerMapMarker.Patches
 			__result.Set(0,0);
 		}
 	}
+
+	[HarmonyPatch(typeof(MapWindow), "Show")]
+	public static class MapWindow_Show_Patch
+	{
+		static void Postfix(MapWindow __instance)
+		{
+			__instance.boatImage.Sprite = "removeplayermapmarker.empty
+		}
+	}
 }
 
