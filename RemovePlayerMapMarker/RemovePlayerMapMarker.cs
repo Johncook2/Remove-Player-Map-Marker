@@ -19,7 +19,9 @@ namespace RemovePlayerMapMarker.Patches
 	{
 		static void Postfix(MapWindow __instance)
 		{
-			__instance.boatImage.sprite = "removeplayermapmarker.empty";
+			Sprite blankSprite;
+			blankSprite = Resources.LoadAll("removeplayermapmarker.empty");
+			__instance.boatImage.sprite = blankSprite;
 		}
 	}
 }
