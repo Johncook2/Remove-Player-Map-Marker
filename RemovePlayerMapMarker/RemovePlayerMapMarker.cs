@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using Winch.Core;
+using Winch.Util;
 using HarmonyLib;
 
 namespace RemovePlayerMapMarker.Patches
@@ -20,7 +21,7 @@ namespace RemovePlayerMapMarker.Patches
 		static void Postfix(MapWindow __instance)
 		{
 			Sprite blankSprite;
-			blankSprite = Resources.Load<Sprite>("removeplayermapmarker.empty");
+			blankSprite = TextureUtil.GetSprite("removeplayermapmarker.empty");
 			__instance.boatImage.sprite = blankSprite;
 		}
 	}
